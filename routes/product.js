@@ -152,8 +152,14 @@ router.post("/addProduct", function (req, res) {
     })
     Product.addProduct(product, function (err, data) {
         if (err) return res.send({"error": 403, "message": "数据库异常！"});
+        var pic = JSON.parse(req.body.pic);
+        for (var i=0;i<pic.length;i++) {
+            console.log('picName='+pic[i].picName);
+            addPic(pic[i].picName, pic[i].picAddr, data.insertId);
+        }
 
-        if (req.body.picName1 && req.body.picAddr1) {
+
+        /*if (req.body.picName1 && req.body.picAddr1) {
             addPic(req.body.picName1, req.body.picAddr1, data.insertId);
         }
         if (req.body.picName2 && req.body.picAddr2) {
@@ -161,7 +167,7 @@ router.post("/addProduct", function (req, res) {
         }
         if (req.body.picName3 && req.body.picAddr3) {
             addPic(req.body.picName3, req.body.picAddr3, data.insertId);
-        }
+        }*/
         res.send({"success": true});
     })
 

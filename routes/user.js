@@ -76,7 +76,8 @@ router.get("/logout", function (req, res) {
 
 router.post("/updatePassword", checkUserLogin);
 router.post("/updatePassword", function (req, res) {
-  if (!req.session.vCodePassword||req.session.vCodePassword!=req.body.vCode) return res.send({ "error": 401, "message": "验证码错误!" });
+  if (!req.session.vCode||req.session.vCode!=req.body.vCode) return res.send({ "error": 401, "message": "验证码错误!" });
+  //if (!req.session.vCodePassword||req.session.vCodePassword!=req.body.vCode) return res.send({ "error": 401, "message": "验证码错误!" });
   var md51 = crypto.createHash('md5');
   var oldPassword = md51.update(req.body.oldPassword).digest('base64');
   var md52 = crypto.createHash('md5');

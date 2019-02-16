@@ -78,7 +78,7 @@ router.get("/queryTopCategoryPaging", function (req, res) {
         })
     })
 });
-router.post("/addSecondCategoryPic", checkRootLogin)
+router.post("/addSecondCategoryPic", checkRootLogin);
 router.post("/addSecondCategoryPic", function (req, res) {
     //创建表单上传
     var form = new formidable.IncomingForm();

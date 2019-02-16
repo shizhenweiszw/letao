@@ -1,0 +1,90 @@
+.product_title{
+    font-size: 16px;
+}
+.mui-slider-item img{
+    vertical-align: top;
+}
+.price{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+}
+.price .now{
+    font-size: 24px;
+    color: #ea543d;
+}
+.price .old{
+    color: #ccc;
+    text-decoration: line-through;
+    padding-left: 10px;
+}
+.size{
+    padding: 10px;
+    font-size: 14px;
+}
+.size span{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 28px;
+    margin-bottom: 5px;
+}
+.size span.active{
+    background-color: #fa672d;
+    color: #ffffff;
+}
+.num{
+    padding: 10px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 28px;
+    border-top: 1px solid #ccc;
+}
+.selectNum{
+    padding-right: 10px;
+}
+.selectNum span{
+    float: left;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    border:1px solid #ccc ;
+}
+.selectNum input{
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+    float: left;
+    text-align: center;
+    line-height: 28px;
+    font-size: 14px;
+    border-radius: 0;
+    border-right: none;
+    border-left: none;
+}
+.btns{
+    padding: 10px;
+    font-size: 14px;
+    overflow: hidden;
+}
+.btns span,
+.btns a{
+    float: left;
+    width: 50%;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    color: #ffffff;
+    font-size: 14px;
+}
+.btns a{
+    background-color: #fa672d;
+}
+.btns span{
+    background-color: #991020;
+}

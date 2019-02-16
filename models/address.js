@@ -61,7 +61,7 @@ Address.updateAddress = function (address, callback) {
   });
 }
 Address.deleteAddress = function (id, callback) {
-  var delSql = "UPDATE address SET isDelete =0 WHERE id =?";
+  var delSql = "DELETE FROM address WHERE id=?";
   db.query(delSql,[id],function (err, res) {
     if (err) {
       return callback(err);

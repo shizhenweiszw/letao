@@ -9,6 +9,7 @@ function ProPic(pic) {
 };
 ProPic.addPic = function (pic, callback) {
   var selectSql = 'insert into product_picture (id,picName,productId,picAddr)  values (null,?,?,?)';
+    console.log("图片插入数据库语句="+selectSql);
   db.query(selectSql, [pic.picName, pic.productId, pic.picAddr], function (err, result) {
     if (err) {
       console.log(err);
